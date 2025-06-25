@@ -1,0 +1,5 @@
+# ninja log v5
+1	6038	1730279686929993777	/home/cr7/zigma/dis_causal_conv1d/build/temp.linux-x86_64-cpython-311/csrc/causal_conv1d_update.o	72370c45c0f95553
+1	15008	1730279695892083067	/home/cr7/zigma/dis_causal_conv1d/build/temp.linux-x86_64-cpython-311/csrc/causal_conv1d_fwd.o	96f2b9b3cd111756
+0	22758	1730279703631158611	/home/cr7/zigma/dis_causal_conv1d/build/temp.linux-x86_64-cpython-311/csrc/causal_conv1d.o	814f5e6d6331d404
+1	43615	1730279724459354929	/home/cr7/zigma/dis_causal_conv1d/build/temp.linux-x86_64-cpython-311/csrc/causal_conv1d_bwd.o	d819f0741f14bd59

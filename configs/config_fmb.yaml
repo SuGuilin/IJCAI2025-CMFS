@@ -1,0 +1,129 @@
+seed: 3407
+
+# Directory settings
+root_dir: "/home/cr7/MMFS/"
+abs_dir: "."
+dataset_name: "FMB"
+dataset_path: "/home/cr7/MMFS/datasets/FMB"
+
+# Dataset Config
+rgb_folder: "Visible"
+rgb_format: ".png"
+x_folder: "Infrared"
+x_format: ".png"
+guide_format: ".png"
+label_folder: "Label"
+label_format: ".png"
+gt_transform: false
+
+# Classes and labels
+num_classes: 15
+class_names: 
+  [
+    'background', 
+    'Road', 
+    'Sidewalk', 
+    'Building', 
+    'Lamp', 
+    'Sign', 
+    'Vegetation',
+    'Sky', 
+    'Person', 
+    'Car', 
+    'Truck', 
+    'Bus', 
+    'Motorcycle', 
+    'Bicycle', 
+    'Pole'
+  ]
+pattale: [
+      [0, 0, 0],  # background  0
+      [228, 228, 179],  # Road 1
+      [133, 57, 181],  # Sidewalk 2
+      [177, 162, 67],  # Building 3
+      [50, 178, 200],  # Lamp 4
+      [199, 45, 132],  # Sign 5
+      [84, 172, 66],  # Vegetation 6
+      [79, 73, 179],  # Sky 7
+      [166, 99, 76],  # Person 8
+      [253, 121, 66],  # Car 9
+      [91, 165, 137],  # Truck 10
+      [152, 97, 155],  # Bus 11
+      [140, 153, 105],  # Motorcycle 12
+      [158, 215, 222],  # Bicycle 13
+      [90, 113, 135],  # Pole 14
+    ]
+labels: ['road', 'sidewalk', 'building', 'lamp',  'sign', 'vegetation', 'sky', 'person', 'car', 'truck', 'bus', 'motorcycle', 'bicycle', 'pole']
+
+
+# Image Config
+x_is_single_channel: true
+train_source: "datasets/FMB/train2.txt"
+eval_source: "datasets/FMB/test.txt"
+is_test: false
+num_train_imgs: 1220
+num_eval_imgs: 280
+background: 255
+image_height: 480 
+image_width: 640
+norm_mean: [0.485]
+norm_std: [0.229]
+
+# Model Config
+backbone: "vmamba_tiny"
+pretrained_backbone: null
+decoder: "MLPDecoder"
+decoder_embed_dim: 512
+
+# Training Config
+align_corners: False
+optimizer: "AdamW"
+lr: 0.00006 
+lr_power: 0.9
+momentum: 0.9
+weight_decay: 0.01
+batch_size: 4 
+nepochs: 500
+num_workers: 16
+fix_bias: true
+bn_eps: 0.001
+bn_momentum: 0.1
+train_scale_array: [0.5, 0.75, 1, 1.25, 1.5, 1.75]
+warm_up_epoch: 10
+
+# Loss Config
+lambda_reg: 0.5 # loss_language
+lambda_coeff: 1 # loss_language
+alpha: 0.5 # loss_in
+beta: 1 # loss_grad
+gamma: 1 # loss_color
+theta: 1 # loss_seg
+sigma: 0.1 # loss_fusion
+Gamma_coeff: 0.8
+Contrast_coeff: 1
+
+# Evaluation Config
+verbose: False
+eval_stride_rate: 0.6667
+eval_scale_array: [1]
+eval_flip: false
+eval_crop_size: [600, 800]
+is_flip: false
+
+# Checkpoint settings
+checkpoint_start_epoch: 100
+checkpoint_step: 5
+checkpoint_dir: "experiment/FMB/exp/checkpoint"
+log_dir_link: "experiment/FMB/exp"
+log_dir: "experiment/FMB/exp"
+tb_dir: "experiment/FMB/exp/tb"
+
+# Result settings
+save_path: './experiment/FMB/exp/result'
+
+# Log file settings
+log_file: "experiment/FMB/exp/train_output.log"
+link_log_file: "experiment/FMB/exp/log_last.log"
+val_log_file: "experiment/FMB/exp/val_output.log"
+link_val_log_file: "experiment/FMB/exp/val_last.log"
+test_log_file: "experiment/FMB/exp/test_output.log"
