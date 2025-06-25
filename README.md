@@ -44,7 +44,7 @@ The proposed framework comprises:
 
 ## 🔥 News
 
-🔥 __[June 24, 2025]:__ The paper and Code were released!
+🔥 __[June 24, 2025]:__ The paper and Code were released! \
 🔥 __[April 29, 2025]:__ Our paper was accepted by **IJCAI 2025**!
 
 
