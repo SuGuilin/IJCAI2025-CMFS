@@ -17,7 +17,7 @@
 
 
 <!-- [![arXiv](http://img.shields.io/badge/arXiv-2505.18581-B31B1B.svg)](https://arxiv.org/abs/2505.18581) -->
-[![Conference](https://2025.ijcai.org/wp-content/uploads/2024/10/IJCAI2025_Montreal_Logo_BN-1.png)]()
+[![Conference](https://2025.ijcai.org/wp-content/uploads/2024/10/IJCAI2025_Montreal_Logo_BN-1.png)](https://www.ijcai.org/proceedings/2025/0209.pdf)
 
 
 </div>
