@@ -40,7 +40,7 @@ class VisionEvaluator(Evaluator):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-e', '--epochs', default='MRFS', type=str)
+    parser.add_argument('-e', '--epochs', default='CMFS', type=str)
     parser.add_argument('-d', '--devices', default='0', type=str)
     parser.add_argument('--dataset_name', '-n', default='mfnet', type=str)
     parser.add_argument('-v', '--verbose', default=False, action='store_true')
